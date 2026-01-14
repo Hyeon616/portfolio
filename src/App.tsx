@@ -102,6 +102,32 @@ function App() {
             <Projects />
             <Educations />
             <Contact />
+
+        {/* Top 버튼 */}
+        {scrolled && (
+          <button
+            className="top-button"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            style={{
+              position: "fixed",
+              bottom: "30px",
+              right: "30px",
+              width: "50px",
+              height: "50px",
+              padding: 0,
+              border: "none",
+              background: "transparent",
+              cursor: "pointer",
+              zIndex: 1000,
+            }}
+          >
+            <img
+              src="/topbutton.png"
+              alt="Top"
+              style={{ width: "100%", height: "100%" }}
+            />
+          </button>
+        )}
       </div>
     )
 

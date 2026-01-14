@@ -28,3 +28,12 @@
 .nav-button:focus-visible {
   outline: none;
 }
+
+.top-button:focus,
+.top-button:active {
+  outline: none;
+}
+
+.top-button:focus-visible {
+  outline: none;
+}

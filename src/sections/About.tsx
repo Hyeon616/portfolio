@@ -56,10 +56,23 @@ export default function About() {
                                         </th>
                                         <td>
                                             <a href="https://github.com/Hyeon616" target="_blank" rel="noopener noreferrer" className="github-link">
-                                                Git
+                                                Github
                                             </a>
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <th>
+                                            <a href="https://youtube.com/@hyeon9869" target="_blank" rel="noopener noreferrer">
+                                                <img src="/youtube-logo.png" alt="YouTube" className="youtube-logo" />
+                                            </a>
+                                        </th>
+                                        <td>
+                                            <a href="https://youtube.com/@hyeon9869" target="_blank" rel="noopener noreferrer" className="youtube-link">
+                                                YouTube
+                                            </a>
+                                        </td>
+                                    </tr>
+
                                 </tbody>
                             </table>
                         </div>

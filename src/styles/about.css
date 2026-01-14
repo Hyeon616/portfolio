@@ -75,11 +75,22 @@
 }
 
 .github-logo {
-    height: 3rem; 
-    vertical-align: middle;
+    height: 1.8rem;
+    margin-left: 5px; 
 }
 
 .github-link {
+    font-size: 1.2rem;
+    color: #213547;
+    text-decoration: none;
+}
+
+.youtube-logo {
+    height: 1.8rem;
+    margin-left: -1px; 
+}
+
+.youtube-link {
     font-size: 1.2rem;
     color: #213547;
     text-decoration: none;

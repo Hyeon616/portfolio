@@ -3,7 +3,7 @@ import "../styles/educations.css";
 
 export default function Educations(){
     return (
-        <SectionLayout id="educations" >
+        <SectionLayout id="educations" minHeight="50vh">  {/* 높이 조정: 30vh ~ 100vh */}
             <h2 className="section-title">학력 및 교육</h2>
 
             <div className="educations-container">
