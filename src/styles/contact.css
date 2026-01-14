@@ -1,51 +1,74 @@
-/* Contact 섹션 스타일 */
+/**
+ * contact.css - 연락처 섹션 스타일
+ *
+ * 연락처 정보와 소셜 링크 레이아웃을 정의합니다.
+ */
+
+/* ========================================
+   컨테이너
+   ======================================== */
+
 .contact-container {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
+/* ========================================
+   이름 및 직군
+   ======================================== */
+
 .contact-name {
-    font-size: 1.2rem;
-    color: #213547;
-    margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #213547;
+  margin-bottom: 0.5rem;
 }
 
 .contact-position {
-    color: #666;
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
 }
 
+/* ========================================
+   연락처 정보 (이메일, 전화번호)
+   ======================================== */
+
 .contact-info {
-    color: #213547;
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
+  color: #213547;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .contact-info p {
-    margin: 0.3rem 0;
+  margin: 0.3rem 0;
 }
+
+/* ========================================
+   소셜 링크 (GitHub, YouTube)
+   ======================================== */
 
 .contact-social {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 1.5rem;
 }
 
+/* 소셜 링크 아이템 */
 .contact-social-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #213547;
-    text-decoration: none;
-    font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #213547;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
 .contact-social-item:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
+/* 소셜 로고 이미지 */
 .contact-social-logo {
-    height: 2rem;
-    width: auto;
+  height: 2rem;
+  width: auto;
 }

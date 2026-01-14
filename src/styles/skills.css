@@ -1,74 +1,139 @@
+/**
+ * skills.css - Skills 섹션 스타일
+ *
+ * 기술 스택 섹션의 레이아웃과 스킬 태그 색상을 정의합니다.
+ */
+
+/* ========================================
+   섹션 레이아웃
+   ======================================== */
+
 /* Skills 섹션 전체 위치 조정 */
 .skills-section {
-    margin-top: -40px;  /* 위로 올리기: 음수값 증가 = 더 위로 */
+  margin-top: -40px; /* 위로 올리기: 음수값 증가 = 더 위로 */
 }
 
+/* 스킬 카드 컨테이너 */
 .skills-card {
-    margin: 2rem auto 0;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 3rem;
-    width: 100%;
-    max-width: 700px;
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: left;
+  margin: 2rem auto 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 3rem;
+  width: 100%;
+  max-width: 700px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
+
+/* ========================================
+   스킬 행 레이아웃
+   ======================================== */
 
 .skills-row {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 1.5rem;
-    gap: 2rem;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 2rem;
 }
 
 .skills-row:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
+/* 카테고리 라벨 (Language, Unity, DB 등) */
 .skills-category {
-    font-weight: 600;
-    font-size: 1.1rem;
-    min-width: 100px;
-    color: #213547;
+  font-weight: 600;
+  font-size: 1.1rem;
+  min-width: 100px;
+  color: #213547;
 }
 
+/* 스킬 태그 컨테이너 */
 .skills-items {
-    display: flex;
-    gap: 0.8rem;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
 }
 
-/* 공통 태그 스타일 */
+/* ========================================
+   스킬 태그 공통 스타일
+   ======================================== */
+
 .skill-tag {
-    padding: 0.4rem 0.8rem;
-    border-radius: 10px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #fff;
-    letter-spacing: 0.02em;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.02em;
 }
 
-/* Language */
-.skill-csharp { background-color: #68217A; }  /* 보라색 */
-.skill-cpp { background-color: #00599C; }     /* 파란색 */
-.skill-python { background-color: #3776AB; }  /* 파이썬 블루 */
+/* ========================================
+   스킬 태그 색상 - Language
+   ======================================== */
 
-/* Unity */
-.skill-unity2d { background-color: #5FB3FF; }   /* 유니티 다크 */
-.skill-unity3d { background-color: #7C7CFF; }   /* 유니티 다크 */
-.skill-unity { background-color: #222222; }   /* 유니티 다크 */
-.skill-unityshader { background-color: #FF4ECD; }   /* 유니티 다크 */
+.skill-csharp {
+  background-color: #68217a; /* C# 보라색 */
+}
+.skill-cpp {
+  background-color: #00599c; /* C++ 파란색 */
+}
+.skill-python {
+  background-color: #3776ab; /* Python 블루 */
+}
 
-/* DB */
-.skill-mariadb { background-color: #4479A1; }   /* MariaDB 블루 */
-.skill-firebase { background-color: #FFCA28; color: #333; }  /* 파이어베이스 노란색 */
-.skill-mongodb { background-color: #47A248; } /* MongoDB 그린 */
+/* ========================================
+   스킬 태그 색상 - Unity
+   ======================================== */
 
-/* DevOps */
-.skill-git { background-color: #F05032; }     /* Git 오렌지 */
-.skill-github { background-color: #181717; }  /* GitHub 블랙 */
-.skill-docker { background-color: #2496ED; }  /* Docker 블루 */
-.skill-postman { background-color: #FF6C37; }  /* Docker 블루 */
-.skill-jenkins { background-color: #D33833; }  /* Docker 블루 */
-.skill-aws { background-color: #FF9900; }  /* Docker 블루 */
+.skill-unity2d {
+  background-color: #5fb3ff; /* Unity 2D 하늘색 */
+}
+.skill-unity3d {
+  background-color: #7c7cff; /* Unity 3D 연보라 */
+}
+.skill-unity {
+  background-color: #222222; /* Unity 기본 다크 */
+}
+.skill-unityshader {
+  background-color: #ff4ecd; /* Shader 핑크 */
+}
+
+/* ========================================
+   스킬 태그 색상 - DB
+   ======================================== */
+
+.skill-mariadb {
+  background-color: #4479a1; /* MariaDB 블루 */
+}
+.skill-firebase {
+  background-color: #ffca28; /* Firebase 노란색 */
+  color: #333;
+}
+.skill-mongodb {
+  background-color: #47a248; /* MongoDB 그린 */
+}
+
+/* ========================================
+   스킬 태그 색상 - DevOps
+   ======================================== */
+
+.skill-git {
+  background-color: #f05032; /* Git 오렌지 */
+}
+.skill-github {
+  background-color: #181717; /* GitHub 블랙 */
+}
+.skill-docker {
+  background-color: #2496ed; /* Docker 블루 */
+}
+.skill-postman {
+  background-color: #ff6c37; /* Postman 오렌지 */
+}
+.skill-jenkins {
+  background-color: #d33833; /* Jenkins 레드 */
+}
+.skill-aws {
+  background-color: #ff9900; /* AWS 오렌지 */
+}

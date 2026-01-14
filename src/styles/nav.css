@@ -1,25 +1,36 @@
-.nav-button{
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
+/**
+ * nav.css - 네비게이션 스타일
+ *
+ * 상단 네비게이션 버튼과 Top 버튼의 스타일을 정의합니다.
+ */
 
-    font-size: 1.2rem;
-    font-weight: 600;
-    font-family: inherit;
+/* ========================================
+   네비게이션 버튼
+   ======================================== */
 
-    color: #555;
+.nav-button {
+  /* 기본 스타일 초기화 */
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 
-    letter-spacing: 0.04em;
-    transition: color 0.25s ease;
+  /* 폰트 설정 */
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: inherit;
+  letter-spacing: 0.04em;
+
+  /* 색상 및 애니메이션 */
+  color: #555;
+  transition: color 0.25s ease;
 }
 
-.nav-button:hover
-{
-    color: #FF8C42;
+.nav-button:hover {
+  color: #FF8C42; /* 호버 시 오렌지색 */
 }
 
-
+/* 포커스 아웃라인 제거 */
 .nav-button:focus,
 .nav-button:active {
   outline: none;
@@ -29,6 +40,11 @@
   outline: none;
 }
 
+/* ========================================
+   Top 버튼 (맨 위로 스크롤)
+   ======================================== */
+
+/* 포커스 아웃라인 제거 */
 .top-button:focus,
 .top-button:active {
   outline: none;

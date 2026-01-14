@@ -1,58 +1,88 @@
+/**
+ * educations.css - 학력 및 교육 섹션 스타일
+ *
+ * 학력/교육 타임라인 레이아웃을 정의합니다.
+ */
+
+/* ========================================
+   컨테이너
+   ======================================== */
+
 .educations-container {
-    max-width: 700px;
-    margin: 2rem auto 0;
-    text-align: left;
+  max-width: 700px;
+  margin: 2rem auto 0;
+  text-align: left;
 }
+
+/* ========================================
+   학력/교육 항목
+   ======================================== */
 
 .education-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
-    padding: 1.5rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1.5rem 0;
 }
+
+/* ========================================
+   기간 영역 (년도 + 상태)
+   ======================================== */
 
 .education-period-wrapper {
-    min-width: 120px;
-    text-align: left;
+  min-width: 120px;
+  text-align: left;
 }
 
+/* 기간 텍스트 (회색) */
 .education-period {
-    color: #888;
-    font-size: 0.95rem;
-    display: block;
+  color: #888;
+  font-size: 0.95rem;
+  display: block;
 }
 
+/* 상태 텍스트 (졸업/수료 - 파란색) */
 .education-status {
-    color: #1a92e2;
-    font-size: 0.85rem;
-    font-weight: 500;
-    margin-top: 0.2rem;
+  color: #1a92e2;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 0.2rem;
 }
+
+/* ========================================
+   정보 영역 (학교명 + 전공)
+   ======================================== */
 
 .education-info {
-    flex: 1;
+  flex: 1;
 }
 
+/* 학교/기관 이름 */
 .education-name {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #213547;
-    margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #213547;
+  margin-bottom: 0.3rem;
 }
 
+/* 전공/과정명 */
 .education-major {
-    font-size: 1rem;
-    color: #555;
+  font-size: 1rem;
+  color: #555;
 }
+
+/* ========================================
+   구분선 및 간격
+   ======================================== */
 
 /* 학력과 교육 사이 구분선 */
 .education-divider {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 1rem 0;
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1rem 0;
 }
 
 /* 항목 간 간격 */
 .education-spacer {
-    height: 1rem;
+  height: 1rem;
 }

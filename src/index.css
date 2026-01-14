@@ -1,3 +1,17 @@
+/**
+ * index.css - 전역 스타일
+ *
+ * 웹사이트 전체에 적용되는 기본 스타일을 정의합니다.
+ * - 폰트 정의 (@font-face)
+ * - 기본 요소 스타일 (body, a, button 등)
+ * - 공통 클래스 (.section-title)
+ */
+
+/* ========================================
+   폰트 정의
+   ======================================== */
+
+/* Pretendard - 본문용 폰트 */
 @font-face {
   font-family: 'Pretendard';
   src: url('/Pretendard-Medium.woff2') format('woff2');
@@ -5,6 +19,7 @@
   font-style: normal;
 }
 
+/* CookieRun Black - 섹션 타이틀용 폰트 */
 @font-face {
   font-family: 'CookieRun';
   src: url('/CookieRun Black.ttf') format('truetype');
@@ -12,27 +27,25 @@
   font-style: normal;
 }
 
+/* ========================================
+   기본 스타일
+   ======================================== */
+
 :root {
+  /* 폰트 설정 */
   font-family: 'Pretendard', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
+  /* 색상 설정 */
   color: #213547;
   background-color: #ffffff;
 
+  /* 폰트 렌더링 최적화 */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 body {
@@ -43,17 +56,40 @@ body {
   min-height: 100vh;
 }
 
+/* ========================================
+   링크 스타일
+   ======================================== */
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+/* ========================================
+   타이포그래피
+   ======================================== */
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
+/* 각 섹션의 제목 스타일 (CookieRun 폰트 적용) */
 .section-title {
   font-size: 2rem;
   font-weight: 900;
   font-family: 'CookieRun', sans-serif;
   letter-spacing: 0.04em;
 }
+
+/* ========================================
+   버튼 기본 스타일
+   ======================================== */
 
 button {
   border-radius: 8px;
@@ -66,22 +102,30 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+/* ========================================
+   라이트 모드 대응
+   ======================================== */
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }

@@ -1,101 +1,135 @@
+/**
+ * about.css - About 섹션 스타일
+ *
+ * 자기소개 섹션의 레이아웃과 스타일을 정의합니다.
+ */
+
+/* ========================================
+   상단 이미지
+   ======================================== */
+
 .top-image {
-    height: 7rem;
-    margin-top: 4.5rem;
-    transition: transform 0.3s ease;
+  height: 7rem;
+  margin-top: 4.5rem;
+  transition: transform 0.3s ease;
 }
 
 .top-image:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px); /* 호버 시 위로 이동 */
 }
 
+/* ========================================
+   프로필 카드
+   ======================================== */
+
 .about-card {
-    margin: 3rem auto 0;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 5rem 1rem;
-    width: 100%;
-    max-width: 700px; /*카드 좌우 크기 조정*/
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 3rem auto 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 5rem 1rem;
+  width: 100%;
+  max-width: 700px; /* 카드 좌우 크기 조정 */
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .about-card-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .about-card-content {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-    justify-content: center;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .about-card-left {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
+
+/* ========================================
+   프로필 사진
+   ======================================== */
 
 .portrait-image {
-    width: 140px;
-    height: 200px;
-    object-fit: cover;
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    margin-top: 40px;
-    margin-left: -80px;  /* 사진 좌우 위치 (음수: 왼쪽, 양수: 오른쪽) */
+  width: 140px;
+  height: 200px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  margin-top: 40px;
+  margin-left: -80px; /* 사진 좌우 위치 (음수: 왼쪽, 양수: 오른쪽) */
 }
 
+/* ========================================
+   정보 테이블
+   ======================================== */
+
 .about-card-right {
-    text-align: left;
-    margin-left: 40px;  /* 목록 좌우 위치 (음수: 왼쪽, 양수: 오른쪽) */
+  text-align: left;
+  margin-left: 40px; /* 목록 좌우 위치 (음수: 왼쪽, 양수: 오른쪽) */
 }
 
 .about-info-table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .about-info-table th,
 .about-info-table td {
-    padding: 0.5rem 1rem;
-    border-bottom: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ddd;
 }
 
 .about-info-table th {
-    width: 100px;
-    font-weight: bold;
-    text-align: left;
-    color: #555;
+  width: 100px;
+  font-weight: bold;
+  text-align: left;
+  color: #555;
 }
 
 .about-info-table td {
-    text-align: left;
+  text-align: left;
 }
 
+/* ========================================
+   소셜 링크 (GitHub, YouTube)
+   ======================================== */
+
+/* GitHub 로고 */
 .github-logo {
-    height: 1.8rem;
-    margin-left: 5px; 
+  height: 1.8rem;
+  margin-left: 5px; /* 로고 좌우 위치 조정 */
 }
 
+/* GitHub 링크 */
 .github-link {
-    font-size: 1.2rem;
-    color: #213547;
-    text-decoration: none;
-}
-
-.youtube-logo {
-    height: 1.8rem;
-    margin-left: -1px; 
-}
-
-.youtube-link {
-    font-size: 1.2rem;
-    color: #213547;
-    text-decoration: none;
+  font-size: 1.2rem;
+  color: #213547;
+  text-decoration: none;
 }
 
 .github-link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+/* YouTube 로고 */
+.youtube-logo {
+  height: 1.8rem;
+  margin-left: -1px; /* 로고 좌우 위치 조정 */
+}
+
+/* YouTube 링크 */
+.youtube-link {
+  font-size: 1.2rem;
+  color: #213547;
+  text-decoration: none;
+}
+
+.youtube-link:hover {
+  text-decoration: underline;
 }
