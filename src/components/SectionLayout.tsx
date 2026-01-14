@@ -4,12 +4,14 @@ interface SectionLayoutProps {
   id: string;
   children: ReactNode;
   minHeight?: string;
+  backgroundColor?: string;
 }
 
 export default function SectionLayout({
   id,
   children,
   minHeight = "100vh",
+  backgroundColor = "transparent",
 }: SectionLayoutProps) {
   return (
     <section
@@ -21,6 +23,7 @@ export default function SectionLayout({
         display: "flex",
         justifyContent: "center",
         alignItems: "flex-start",
+        backgroundColor,
       }}
     >
       <div

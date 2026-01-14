@@ -1,5 +1,19 @@
+@font-face {
+  font-family: 'Pretendard';
+  src: url('/Pretendard-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CookieRun';
+  src: url('/CookieRun Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Pretendard', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -32,6 +46,13 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 900;
+  font-family: 'CookieRun', sans-serif;
+  letter-spacing: 0.04em;
 }
 
 button {
