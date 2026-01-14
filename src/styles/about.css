@@ -1,0 +1,89 @@
+.top-image {
+    height: 7rem;
+    margin-top: 4.5rem;
+    transition: transform 0.3s ease;
+}
+
+.top-image:hover {
+    transform: translateY(-10px);
+}
+
+.about-card {
+    margin: 3rem auto 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 5rem 1rem;
+    width: 100%;
+    max-width: 700px; /*카드 좌우 크기 조정*/
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.about-card-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.about-card-left {
+    flex-shrink: 0;
+}
+
+.portrait-image {
+    width: 140px;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    margin-left: -80px;  /* 사진 좌우 위치 (음수: 왼쪽, 양수: 오른쪽) */
+}
+
+.about-card-right {
+    text-align: left;
+    margin-left: 40px;  /* 목록 좌우 위치 (음수: 왼쪽, 양수: 오른쪽) */
+}
+
+.about-info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.about-info-table th,
+.about-info-table td {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.about-info-table th {
+    width: 100px;
+    font-weight: bold;
+    text-align: left;
+    color: #555;
+}
+
+.about-info-table td {
+    text-align: left;
+}
+
+.github-logo {
+    height: 3rem; 
+    vertical-align: middle;
+}
+
+.github-link {
+    font-size: 1.2rem;
+    color: #213547;
+    text-decoration: none;
+}
+
+.github-link:hover {
+    text-decoration: underline;
+}

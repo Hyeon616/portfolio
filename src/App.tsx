@@ -1,9 +1,11 @@
 import About from "./sections/About";
+import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Educations from "./sections/Educations";
 import Contact from "./sections/Contact";
 import { useEffect, useState } from "react";
 
+import "./styles/nav.css";
 
 function App() {
     const [scrolled, setScrolled] = useState(false);
@@ -24,7 +26,7 @@ function App() {
 
 
     return (
-      <>
+      <div>
         {/* 상단 고정 네비게이션 */}
         <nav
           style={{
@@ -44,10 +46,13 @@ function App() {
               borderBottom: "1px solid #ddd",
               opacity: scrolled ? 1 : 0,
               transition: "opacity 0.3s ease",
-              pointerEvents: "none", // 🔥 배경은 클릭 방해 ❌
+              pointerEvents: "none",
             }}
           />
+
+          {/* 버튼 레이어 */}
           <div
+            className={scrolled ? "nav scrolled" : "nav"}
             style={{
               position: "relative",
               maxWidth: "1200px",
@@ -56,25 +61,48 @@ function App() {
               display: "flex",
               justifyContent: "flex-end",
               alignItems: "center",
-              gap: "20px",
+              gap: "36px",
               padding: "0 24px",
             }}
           >
-            <button onClick={()=> scrollTo("about")}>About</button>
-            <button onClick={()=> scrollTo("projects")}>projects</button>
-            <button onClick={()=> scrollTo("educations")}>Educations</button>
-            <button onClick={()=> scrollTo("contact")}>Contact</button>
+            <button
+              className="nav-button"
+              onClick={()=> scrollTo("about")}>
+                About
+            </button>
+
+            <button
+              className="nav-button"
+              onClick={()=> scrollTo("skills")}>
+                Skills
+            </button>
+
+            <button
+              className="nav-button"
+              onClick={()=> scrollTo("projects")}>
+                Projects
+            </button>
+
+            <button 
+              className="nav-button"
+              onClick={()=> scrollTo("educations")}>
+                Educations
+            </button>
+
+            <button 
+              className="nav-button"
+              onClick={()=> scrollTo("contact")}>
+                Contact
+            </button>
+
           </div>
         </nav>
-
-          {/* 네비게이션 높이만큼 여백 */}
             <About />
-            <div style={{paddingTop : "60px"}}>
+            <Skills />
             <Projects />
             <Educations />
             <Contact />
-          </div>
-      </>
+      </div>
     )
 
 };

@@ -1,0 +1,30 @@
+.nav-button{
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: inherit;
+
+    color: #555;
+
+    letter-spacing: 0.04em;
+    transition: color 0.25s ease;
+}
+
+.nav-button:hover
+{
+    color: #FF8C42;
+}
+
+
+.nav-button:focus,
+.nav-button:active {
+  outline: none;
+}
+
+.nav-button:focus-visible {
+  outline: none;
+}
