@@ -8,6 +8,10 @@
  */
 
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+
+// 컴포넌트
+import Navigation from "./components/Navigation";
 
 // 섹션 컴포넌트
 import About from "./sections/About";
@@ -20,17 +24,10 @@ import Contact from "./sections/Contact";
 import "./styles/nav.css";
 
 function App() {
+  const location = useLocation();
+
   // 스크롤 상태 (10px 이상 스크롤 시 true)
   const [scrolled, setScrolled] = useState(false);
-
-  /**
-   * 특정 섹션으로 부드럽게 스크롤
-   * @param id - 스크롤할 섹션의 ID
-   */
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
 
   // 스크롤 이벤트 리스너 등록
   useEffect(() => {
@@ -42,63 +39,21 @@ function App() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // 해시가 있으면 해당 섹션으로 스크롤 (다른 페이지에서 돌아올 때)
+  useEffect(() => {
+    if (location.hash) {
+      const sectionId = location.hash.replace("#", "");
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }, [location]);
+
   return (
     <div>
       {/* ========== 상단 고정 네비게이션 ========== */}
-      <nav
-        style={{
-          position: "fixed",
-          top: 0,
-          width: "100%",
-          height: "64px",
-          zIndex: 1000,
-        }}
-      >
-        {/* 네비게이션 배경 (스크롤 시 페이드인) */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background: "#fff",
-            borderBottom: "1px solid #ddd",
-            opacity: scrolled ? 1 : 0,
-            transition: "opacity 0.3s ease",
-            pointerEvents: "none",
-          }}
-        />
-
-        {/* 네비게이션 버튼 컨테이너 */}
-        <div
-          className={scrolled ? "nav scrolled" : "nav"}
-          style={{
-            position: "relative",
-            maxWidth: "1200px",
-            margin: "0 auto",
-            height: "100%",
-            display: "flex",
-            justifyContent: "flex-end",
-            alignItems: "center",
-            gap: "36px",
-            padding: "0 24px",
-          }}
-        >
-          <button className="nav-button" onClick={() => scrollTo("about")}>
-            About
-          </button>
-          <button className="nav-button" onClick={() => scrollTo("skills")}>
-            Skills
-          </button>
-          <button className="nav-button" onClick={() => scrollTo("projects")}>
-            Projects
-          </button>
-          <button className="nav-button" onClick={() => scrollTo("educations")}>
-            Educations
-          </button>
-          <button className="nav-button" onClick={() => scrollTo("contact")}>
-            Contact
-          </button>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* ========== 메인 섹션들 ========== */}
       <About />
