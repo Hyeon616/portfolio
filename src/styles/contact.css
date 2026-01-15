@@ -5,11 +5,48 @@
  */
 
 /* ========================================
+   섹션 배경 이미지
+   ======================================== */
+
+.contact-section {
+  position: relative;
+  background-image: url("/backgroundImage.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 배경 오버레이 (불투명도 조절) */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* 70% 흰색 오버레이 */
+  z-index: 0;
+}
+
+/* 콘텐츠가 오버레이 위에 표시되도록 */
+.contact-section > div {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========================================
    컨테이너
    ======================================== */
 
 .contact-container {
-  margin-top: 1rem;
+  display: inline-block;
+  background: #fff;
+  padding: 1rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin-top: 0rem;
+}
+
+/* CONTACT 타이틀 위치 조정 */
+.contact-container .section-title {
+  margin-top: 0.1rem; /* 이 값을 조절하세요 */
 }
 
 /* ========================================

@@ -72,7 +72,16 @@ export const projectsData: Project[] = [
     description: "이것은 샘플 프로젝트입니다. 프로젝트에 대한 설명을 여기에 작성하세요.",
     image: "/project-sample.png",
     tags: ["Unity2D", "C#", "Firebase"],
-    content: "프로젝트 상세 내용을 여기에 작성합니다.",
+    content: `
+## 주요 기능
+- 실시간 멀티플레이어 지원
+- Firebase 연동 로그인
+
+### 기술적 특징
+일반 텍스트입니다.
+**볼드 텍스트**와 *이탤릭 텍스트*도 가능합니다.
+
+`,
   },
   {
     id: 2,

@@ -16,6 +16,7 @@ interface SectionLayoutProps {
   children: ReactNode;
   minHeight?: string;
   backgroundColor?: string;
+  className?: string;
 }
 
 export default function SectionLayout({
@@ -23,10 +24,12 @@ export default function SectionLayout({
   children,
   minHeight = "100vh",
   backgroundColor = "transparent",
+  className = "",
 }: SectionLayoutProps) {
   return (
     <section
       id={id}
+      className={className}
       style={{
         minHeight,
         width: "100vw",

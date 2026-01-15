@@ -5,6 +5,7 @@
  */
 
 import { useParams } from "react-router-dom";
+import Markdown from "react-markdown";
 import Navigation from "../components/Navigation";
 import SectionLayout from "../components/SectionLayout";
 import { getProjectBySlug, getTagColor } from "../data/projectsData";
@@ -71,10 +72,10 @@ export default function ProjectDetailPage() {
 
             <p className="project-detail-description">{project.description}</p>
 
-            {/* 상세 내용 */}
+            {/* 상세 내용 (마크다운 지원) */}
             {project.content && (
               <div className="project-detail-content">
-                {project.content}
+                <Markdown>{project.content}</Markdown>
               </div>
             )}
           </div>

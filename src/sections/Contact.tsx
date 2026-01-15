@@ -12,10 +12,9 @@ import "../styles/contact.css";
 
 export default function Contact() {
   return (
-    <SectionLayout id="contact" minHeight="60vh">
-      <h2 className="section-title">CONTACT</h2>
-
+    <SectionLayout id="contact" minHeight="60vh" className="contact-section">
       <div className="contact-container">
+        <h2 className="section-title">CONTACT</h2>
         {/* 이름 및 희망 직군 */}
         <p className="contact-name">우종현 · Jonghyeon Woo</p>
         <p className="contact-position">게임 개발 직군 희망</p>
