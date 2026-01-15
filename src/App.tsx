@@ -7,7 +7,7 @@
  * - 스크롤 시 나타나는 Top 버튼
  */
 
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 // 컴포넌트
@@ -29,6 +29,15 @@ function App() {
   // 스크롤 상태 (10px 이상 스크롤 시 true)
   const [scrolled, setScrolled] = useState(false);
 
+  // 저장된 스크롤 위치 복원 (렌더링 전에 실행)
+  useLayoutEffect(() => {
+    const savedScrollY = sessionStorage.getItem("mainScrollY");
+    if (savedScrollY) {
+      window.scrollTo(0, parseInt(savedScrollY));
+      sessionStorage.removeItem("mainScrollY"); // 사용 후 제거
+    }
+  }, []);
+
   // 스크롤 이벤트 리스너 등록
   useEffect(() => {
     const onScroll = () => {
@@ -39,13 +48,17 @@ function App() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // 해시가 있으면 해당 섹션으로 스크롤 (다른 페이지에서 돌아올 때)
+  // 해시가 있으면 해당 섹션으로 이동 (다른 페이지에서 돌아올 때 - 네비게이션 바 높이 고려)
   useEffect(() => {
     if (location.hash) {
       const sectionId = location.hash.replace("#", "");
       setTimeout(() => {
         const element = document.getElementById(sectionId);
-        element?.scrollIntoView({ behavior: "smooth" });
+        if (element) {
+          const navHeight = 64; // 네비게이션 바 높이
+          const elementTop = element.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({ top: elementTop - navHeight, behavior: "instant" });
+        }
       }, 100);
     }
   }, [location]);

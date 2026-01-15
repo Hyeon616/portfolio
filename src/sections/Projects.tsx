@@ -11,6 +11,11 @@ import SectionLayout from "../components/SectionLayout";
 import { projectsData, getTagColor } from "../data/projectsData";
 import "../styles/projects.css";
 
+// 프로젝트 페이지 이동 전 스크롤 위치 저장
+const saveScrollPosition = () => {
+  sessionStorage.setItem("mainScrollY", window.scrollY.toString());
+};
+
 export default function Projects() {
   return (
     <SectionLayout id="projects">
@@ -18,7 +23,7 @@ export default function Projects() {
 
       {/* 모든 프로젝트 보기 링크 */}
       <div className="projects-header">
-        <Link to="/projects" className="projects-view-all">
+        <Link to="/projects" className="projects-view-all" onClick={saveScrollPosition}>
           모든 프로젝트 보기
         </Link>
       </div>
@@ -30,6 +35,7 @@ export default function Projects() {
             key={project.id}
             to={`/projects/${project.slug}`}
             className="project-card-link"
+            onClick={saveScrollPosition}
           >
             <div className="project-card">
               {/* 좌측: 이미지 */}

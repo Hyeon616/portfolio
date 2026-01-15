@@ -84,9 +84,13 @@ export default function Navigation() {
           padding: "0 24px",
         }}
       >
-        {/* 프로젝트 페이지: 이전 페이지로 돌아가기 (스크롤 위치 유지) */}
+        {/* 프로젝트 페이지: 저장된 스크롤 위치로 돌아가기 */}
         {(isProjectsPage || isProjectDetailPage) && (
-          <button className="nav-button" onClick={() => navigate(-1)} style={{ marginRight: "auto" }}>
+          <button
+            className="nav-button"
+            onClick={() => navigate("/")}
+            style={{ marginRight: "auto" }}
+          >
             ← 돌아가기
           </button>
         )}
