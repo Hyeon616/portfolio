@@ -41,6 +41,7 @@ export default function Skills() {
               <span className="skill-tag skill-unity">UniTask</span>
               <span className="skill-tag skill-unity">DOTween</span>
               <span className="skill-tag skill-unity">Mirror</span>
+              <span className="skill-tag skill-unity">FishNet</span>
             </div>
           </div>
 
